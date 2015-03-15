@@ -347,10 +347,11 @@ int id action_menu_presenter 0x7f05001b
 int id action_mode_bar 0x7f05002e
 int id action_mode_bar_stub 0x7f05002d
 int id action_mode_close_button 0x7f050020
-int id action_settings 0x7f050041
+int id action_settings 0x7f050042
 int id activity_chooser_view_content 0x7f050021
 int id always 0x7f05000d
 int id beginning 0x7f050012
+int id btnOk 0x7f050041
 int id checkbox 0x7f050029
 int id collapseActionView 0x7f05000f
 int id decor_content_parent 0x7f05002f
@@ -447,6 +448,7 @@ int string action_settings 0x7f0a0012
 int string app_name 0x7f0a0010
 int string hello_world 0x7f0a0011
 int string manhau_mesmo 0x7f0a0013
+int string ok 0x7f0a0014
 int style AppBaseTheme 0x7f0b00eb
 int style AppTheme 0x7f0b00ec
 int style Base_TextAppearance_AppCompat 0x7f0b0098
