@@ -12,6 +12,7 @@ public class TelaInicial extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial);
+        //Comentário pra testar.
     }
 
 
