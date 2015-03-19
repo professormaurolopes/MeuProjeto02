@@ -57,7 +57,7 @@ public class JanelaPrincipal extends ActionBarActivity implements OnClickListene
 		int idade;
 		nome = tnome.getText().toString();
 		idade = Integer.parseInt(tidade.getText().toString());
-		//Toast.makeText(this, nome, Toast.LENGTH_SHORT).show();
+		
 		Intent it = new Intent(this, Janela02.class);
 		Bundle parametros = new Bundle();
 		parametros.putString("nome", nome);

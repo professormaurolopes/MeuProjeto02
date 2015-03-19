@@ -13,6 +13,7 @@ public class Janela02 extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_janela02);
+		//Recupera a Intent
 		Intent it = getIntent();
 		Bundle param = it.getExtras();
 		String nome = param.getString("nome");
