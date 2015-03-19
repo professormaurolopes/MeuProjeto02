@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class JanelaPrincipal extends ActionBarActivity implements OnClickListener {
 
-    private EditText tnome;
+    private EditText tnome,tidade;
     private Button bMsg;
     
 	@Override
@@ -23,6 +23,7 @@ public class JanelaPrincipal extends ActionBarActivity implements OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_janela_principal);
         tnome = (EditText) findViewById(R.id.txtNome);
+        tidade = (EditText) findViewById(R.id.txtIdade);
         bMsg = (Button) findViewById(R.id.btnMensagem);
         bMsg.setOnClickListener(this);
         
@@ -53,11 +54,14 @@ public class JanelaPrincipal extends ActionBarActivity implements OnClickListene
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		String nome;
+		int idade;
 		nome = tnome.getText().toString();
+		idade = Integer.parseInt(tidade.getText().toString());
 		//Toast.makeText(this, nome, Toast.LENGTH_SHORT).show();
 		Intent it = new Intent(this, Janela02.class);
 		Bundle parametros = new Bundle();
 		parametros.putString("nome", nome);
+		parametros.putInt("idade", idade);
 		it.putExtras(parametros);
 		startActivity(it);
 		

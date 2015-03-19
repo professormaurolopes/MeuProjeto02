@@ -16,7 +16,8 @@ public class Janela02 extends Activity {
 		Intent it = getIntent();
 		Bundle param = it.getExtras();
 		String nome = param.getString("nome");
-		Toast.makeText(this, "Meu Nome é " + nome, Toast.LENGTH_SHORT).show();
+		int idade = param.getInt("idade");
+		Toast.makeText(this, "Meu Nome é " + nome + " e minha idade é: " + idade, Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
