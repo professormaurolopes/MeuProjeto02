@@ -9,8 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 
 public class JanelaPrincipal extends ActionBarActivity implements OnClickListener {
@@ -22,9 +21,11 @@ public class JanelaPrincipal extends ActionBarActivity implements OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_janela_principal);
+        //Recupera os componentes do arquivo de layout
         tnome = (EditText) findViewById(R.id.txtNome);
         tidade = (EditText) findViewById(R.id.txtIdade);
         bMsg = (Button) findViewById(R.id.btnMensagem);
+        //Registra o componente junto ao Listener
         bMsg.setOnClickListener(this);
         
     }
@@ -55,14 +56,19 @@ public class JanelaPrincipal extends ActionBarActivity implements OnClickListene
 		// TODO Auto-generated method stub
 		String nome;
 		int idade;
+		//Recupera o conteúdo dos componestes da Tela
 		nome = tnome.getText().toString();
 		idade = Integer.parseInt(tidade.getText().toString());
-		
+		//Cria a Intent para abrir a Janela02
+		//Informamos o contexto e a Activity que queremos abrir
 		Intent it = new Intent(this, Janela02.class);
+		//Criacao de um Bundle para passar os parametros para a outra Janela
 		Bundle parametros = new Bundle();
 		parametros.putString("nome", nome);
 		parametros.putInt("idade", idade);
+		//Vinculamos o nosso Bundle ao nosso Intent
 		it.putExtras(parametros);
+		//Iniciamos a nossa outra Activity
 		startActivity(it);
 		
 	}

@@ -5,20 +5,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.widget.TextView;
+
 
 public class Janela02 extends Activity {
-
+	private TextView txtmsg;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_janela02);
+		txtmsg = (TextView) findViewById(R.id.txtmsg);
 		//Recupera a Intent
 		Intent it = getIntent();
+		//Recupera o Bundle
 		Bundle param = it.getExtras();
+		//Recupera os parametros
 		String nome = param.getString("nome");
 		int idade = param.getInt("idade");
-		Toast.makeText(this, "Meu Nome é " + nome + " e minha idade é: " + idade, Toast.LENGTH_SHORT).show();
+		//Utiliza os parametros recuperados
+		txtmsg.setText("Meu Nome é " + nome + " e minha idade é: " + idade);
 	}
 
 	@Override
